@@ -22,6 +22,9 @@ def index(request):
 def about(request):
 
     context_dict = {'boldmessage': 'This tutorial has been put together by Sinead.'}
+
+    print(request.method)
+    print(request.user)
     
     return render(request, 'rango/about.html', context=context_dict)
 
