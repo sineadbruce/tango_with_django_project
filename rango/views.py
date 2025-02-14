@@ -166,7 +166,7 @@ def get_server_side_cookie(request, cookie, default_val=None):
 
 def visitor_cookie_handler(request):
 
-    visits = int(request.COOKIES.get('visits', '1'))
+    visits = int(get_server_side_cookie(request, 'visits', '1'))
 
     last_visit_cookie = get_server_side_cookie(request,
                                                 'last_visit',
